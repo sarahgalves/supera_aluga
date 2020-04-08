@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Aluga Ferramentas</title>
+        <script type="text/javascript" src="js/main.js"></script>
+        <link rel="shortcut icon" href="img/ferramenta.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <h1><img src="img/ferramenta.png" width="50px"> Aluga Ferramentas</h1>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" 
+                    aria-controls="v-pills-home" aria-selected="true">Página Inicial</a>
+                    <a class="nav-link" id="v-pills-ferramentas-tab" data-toggle="pill" href="#v-pills-ferramentas" role="tab" 
+                    aria-controls="v-pills-ferramentas" aria-selected="false">Ferramentas</a>
+                    <a class="nav-link" id="v-pills-alugar-tab" data-toggle="pill" href="#v-pills-alugar" role="tab" 
+                    aria-controls="v-pills-alugar" aria-selected="false">Alugar Ferramentas</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" 
+                    aria-labelledby="v-pills-home-tab">
+                        <h2>Página Inicial</h2>
+                        <p>Olá,</p>
+                        <p>Seja Bem vindo(a)!</p>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-ferramentas" role="tabpanel" 
+                    aria-labelledby="v-pills-ferramentas-tab">
+                    <h2>Ferramentas</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <input id="tipo" type="text" class="form-control" placeholder="Nome (tipo)">
+                            </div>
+                            <div class="col">
+                                <input id="qtd" type="number" class="form-control" placeholder="Quantidade">
+                            </div>
+                            <div class="col">
+                                <input id="price" type="number" class="form-control" placeholder="R$">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="adicionar" 
+                            onclick="adicionar_ferramenta()">Adicionar</button>
+                        </div>
+                    </form>
+                    <table  id= "tabela" class="table table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome (tipo)</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">R$</th>
+                            <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Chave de Fenda</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>Disponível</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Martelo</td>
+                            <td>1</td>
+                            <td>1,50</td>
+                            <td>Alugada</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-alugar" role="tabpanel" 
+                    aria-labelledby="v-pills-alugar-tab">
+                        <h2>Alugar Ferramentas</h2>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        </form>
+                        <table id="tabela" class="table table-striped">
+                            <thead>
+                                <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome (tipo)</th>
+                                <th scope="col">R$</th>
+                                <th scope="col">Usuário</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+    </body>
+
+</html>
